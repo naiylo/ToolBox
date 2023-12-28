@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="profile_container" stylesheets="@../../Styles/ClientProfile.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toolbox.Controllers.Client.ClientProfileController">
+   <Text layoutX="355.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile" AnchorPane.topAnchor="25.0" />
+   <AnchorPane layoutX="36.0" layoutY="91.0" prefHeight="669.0" prefWidth="798.0" styleClass="profile_content_container" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color red="1.0" green="1.0" blue="1.0" />
+            </color>
+         </DropShadow>
+      </effect>
+      <Text layoutX="31.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0" />
+      <Text layoutX="31.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="150.0" />
+      <Text layoutX="31.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="250.0" />
+      <Label fx:id="name_label" layoutX="31.0" layoutY="82.0" text="Victoria Doronceanu" AnchorPane.leftAnchor="50.0" />
+      <Label fx:id="email_label" layoutX="31.0" layoutY="182.0" text="doronceanu@gmail.com" AnchorPane.leftAnchor="50.0" />
+      <Label fx:id="password_label" layoutX="29.0" layoutY="283.0" text="password123" AnchorPane.leftAnchor="50.0" />
+      <Text layoutX="447.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avatar:" />
+      <FontAwesomeIcon glyphName="USER" layoutX="490.0" layoutY="259.0" size="153" wrappingWidth="122.1328125" />
+      <Button fx:id="change_profile_button" layoutX="55.0" layoutY="471.0" mnemonicParsing="false" prefWidth="175.0" text="Change Profile" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIcon glyphName="PENCIL" size="20" wrappingWidth="23.1328125" />
+         </graphic></Button>
+      <Line endX="523.5" layoutX="144.0" layoutY="408.0" startX="-100.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+      <Button fx:id="delete_profile_button" layoutX="426.0" layoutY="471.0" mnemonicParsing="false" text="Delete Profile" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIcon glyphName="CLOSE" size="20" wrappingWidth="23.1328125" />
+         </graphic></Button>
+      <Line endX="523.5" layoutX="129.0" layoutY="305.0" startX="321.0" />
+      <Line endX="483.5" endY="0.5" layoutX="-34.0" layoutY="305.0" startX="483.5" startY="-200.0" />
+      <Line endX="483.5" endY="0.5" layoutX="169.0" layoutY="305.0" startX="483.5" startY="-200.0" />
+      <Line endX="523.5" layoutX="129.0" layoutY="104.0" startX="321.0" />
+   </AnchorPane>
+</AnchorPane>

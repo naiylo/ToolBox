@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="login_container" stylesheets="@../Styles/Login.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.toolbox.Controllers.LoginController">
+   <VBox layoutX="-1.0" prefHeight="400.0" prefWidth="300.0" styleClass="login_logo_container"
+         AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <FontAwesomeIcon glyphName="GEARS" size="50"/>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ToolBox"/>
+      <Label text="Choose you Account Type:"/>
+      <ChoiceBox fx:id="account_selector" prefHeight="23.0" prefWidth="70.0" styleClass="login_account_selector"/>
+   </VBox>
+   <AnchorPane layoutX="337.0" layoutY="55.0" prefHeight="400.0" prefWidth="300.0" styleClass="login_form_container"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <PasswordField fx:id="password_field" layoutX="21.0" layoutY="233.0" prefWidth="259.0" styleClass="input_field">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.7647058963775635" green="0.7647058963775635" blue="0.7647058963775635"/>
+               </color>
+            </DropShadow>
+         </effect>
+      </PasswordField>
+      <TextField fx:id="email_address_field" layoutX="21.0" layoutY="165.0" prefWidth="259.0" styleClass="input_field">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.7647058963775635" green="0.7647058963775635" blue="0.7647058963775635"/>
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <Label fx:id="error_label" layoutX="138.0" layoutY="357.0" styleClass="error_label" text="Error"/>
+      <Button fx:id="login_button" layoutX="103.0" layoutY="288.0" mnemonicParsing="false" text="Login"/>
+      <Label fx:id="email_address_label" layoutX="21.0" layoutY="145.0" text="E-Mail-Address:"/>
+      <Label fx:id="password_label" layoutX="21.0" layoutY="212.0" text="Password:"/>
+      <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="111.0" layoutY="118.0" size="100">
+         <effect>
+            <DropShadow/>
+         </effect>
+      </FontAwesomeIcon>
+   </AnchorPane>
+</AnchorPane>

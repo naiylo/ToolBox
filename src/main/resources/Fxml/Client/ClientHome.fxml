@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="home_container" stylesheets="@../../Styles/ClientHome.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toolbox.Controllers.Client.ClientHomeController">
+   <AnchorPane layoutX="187.0" layoutY="167.0" prefHeight="695.0" prefWidth="800.0" styleClass="home_content_container" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color red="1.0" green="1.0" blue="1.0" />
+            </color>
+         </DropShadow>
+      </effect>
+      <AnchorPane layoutX="89.0" layoutY="157.0" prefHeight="152.0" prefWidth="215.0" styleClass="home_calendar_container" AnchorPane.rightAnchor="446.0" AnchorPane.topAnchor="157.0">
+         <Text layoutX="38.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student-Calendar" textAlignment="CENTER" wrappingWidth="139.21875" />
+         <Button fx:id="student_calendar_find_button" layoutX="38.0" layoutY="95.0" mnemonicParsing="false" prefWidth="166.0" text="Find out more!" />
+      </AnchorPane>
+      <Label layoutX="89.0" layoutY="86.0" text="Current Features:" />
+      <AnchorPane layoutX="446.0" layoutY="158.0" prefHeight="152.0" prefWidth="215.0" styleClass="home_coming_soon_container">
+         <Text layoutX="38.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" textAlignment="CENTER" wrappingWidth="139.21875" />
+      </AnchorPane>
+      <AnchorPane layoutX="89.0" layoutY="361.0" prefHeight="152.0" prefWidth="215.0" styleClass="home_coming_soon_container">
+         <Text layoutX="38.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" textAlignment="CENTER" wrappingWidth="139.21875" />
+      </AnchorPane>
+      <AnchorPane layoutX="446.0" layoutY="361.0" prefHeight="152.0" prefWidth="215.0" styleClass="home_coming_soon_container">
+         <Text layoutX="38.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" textAlignment="CENTER" wrappingWidth="139.21875" />
+      </AnchorPane>
+   </AnchorPane>
+   <Text layoutX="355.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" AnchorPane.topAnchor="25.0" />
+   <Label fx:id="welcome_label" layoutX="50.0" layoutY="43.0" text="Welcome, Victoria!" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="43.0" />
+   <Label fx:id="date_label" layoutX="693.0" layoutY="43.0" text="Today, 2023-31-12" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="43.0" />
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="250.0" styleClass="menu_container" stylesheets="@../../Styles/AdminMenu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toolbox.Controllers.Admin.AdminMenuController">
+   <effect>
+      <InnerShadow height="0.0" offsetX="-2.0" radius="4.75">
+         <color>
+            <Color red="1.0" green="1.0" blue="1.0" />
+         </color>
+      </InnerShadow>
+   </effect>
+   <AnchorPane prefHeight="750.0" prefWidth="233.0">
+      <VBox layoutY="-9.0" prefHeight="120.0" prefWidth="195.0" styleClass="menu_logo_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0">
+         <FontAwesomeIcon glyphName="GEARS" size="60" tabSize="20">
+            <effect>
+               <Glow />
+            </effect>
+         </FontAwesomeIcon>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ToolBox">
+            <effect>
+               <Glow />
+            </effect>
+         </Text>
+      </VBox>
+      <VBox layoutY="162.0" prefHeight="400.0" prefWidth="195.0" styleClass="menu_button_container" AnchorPane.bottomAnchor="175.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="175.0">
+         <Button fx:id="create_account_button" alignment="BOTTOM_LEFT" mnemonicParsing="false" text="Create Account">
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.8549019694328308" green="0.8549019694328308" blue="0.8549019694328308" />
+                  </color>
+               </DropShadow>
+            </effect>
+            <font>
+               <Font name="Chiller" size="12.0" />
+            </font>
+            <graphic>
+               <FontAwesomeIcon glyphName="PLUS" size="20" />
+            </graphic>
+         </Button>
+         <Button fx:id="delete_account_button" alignment="BOTTOM_LEFT" mnemonicParsing="false" text="Delete Account">
+            <graphic>
+               <FontAwesomeIcon glyphName="CLOSE" size="20" />
+            </graphic>
+         </Button>
+         <Button fx:id="profiles_button" alignment="BOTTOM_LEFT" mnemonicParsing="false" text="Profiles">
+            <graphic>
+               <FontAwesomeIcon glyphName="LIST" size="20" />
+            </graphic>
+         </Button>
+         <Line endX="120.0" stroke="#ababab" />
+         <Button fx:id="logout_button" alignment="BOTTOM_LEFT" mnemonicParsing="false" text="Logout">
+            <graphic>
+               <FontAwesomeIcon glyphName="EXTERNAL_LINK" size="20" />
+            </graphic>
+         </Button>
+      </VBox>
+      <VBox layoutY="630.0" prefHeight="120.0" prefWidth="195.0" styleClass="menu_report_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="55.0">
+         <Label fx:id="report_Label" text="Report Suggestions or Bug" />
+         <Button fx:id="report_button" mnemonicParsing="false" text="Report">
+            <graphic>
+               <FontAwesomeIcon glyphName="PLUS" size="20" />
+            </graphic>
+         </Button>
+      </VBox>
+   </AnchorPane>
+</VBox>

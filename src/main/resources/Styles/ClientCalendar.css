@@ -1,0 +1,34 @@
+/* Main Container */
+.calendar_container {
+    -fx-background-color: white;
+    -fx-alignment: center;
+    -fx-font-family: "Century Gothic";
+    -fx-font-weight: bold;
+
+}
+
+.calendar_container Text {
+    -fx-font-size: 4em;
+    -fx-fill: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-alignment: left;
+}
+
+/* Content Container */
+.calendar_content_container {
+    -fx-background-color: white;
+    -fx-background-radius: 0 40 0 40;
+    -fx-border-color: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-border-radius: 0 40 0 40;
+    -fx-effect: dropshadow(two-pass-box, #a1a1a1,5,0,0,4);
+}
+
+.calendar_content_container .list-view {
+    -fx-background-color: white;
+    -fx-border-width: 0;
+}
+
+.calendar_content_container .list-cell {
+    -fx-background-color: white;
+    -fx-padding: 10 0 10 0;
+}
+

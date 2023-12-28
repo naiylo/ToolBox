@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="admin_profiles_container" stylesheets="@../../Styles/AdminProfiles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toolbox.Controllers.Admin.AdminProfilesController">
+   <Text layoutX="344.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profiles" AnchorPane.topAnchor="25.0" />
+   <AnchorPane layoutX="207.0" layoutY="187.0" prefHeight="695.0" prefWidth="800.0" styleClass="admin_profiles_content_container" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color red="1.0" green="1.0" blue="1.0" />
+            </color>
+         </DropShadow>
+      </effect>
+      <ListView fx:id="profiles_listview" layoutX="14.0" layoutY="14.0" prefHeight="567.0" prefWidth="722.0" />
+   </AnchorPane>
+</AnchorPane>

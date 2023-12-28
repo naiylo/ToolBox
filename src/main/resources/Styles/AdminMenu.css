@@ -1,0 +1,87 @@
+/* Main Container */
+.menu_container {
+    -fx-background-color: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-alignment: center;
+    -fx-font-family: "Century Gothic";
+    -fx-font-weight: bold;
+
+}
+
+/* Logo Container Styles */
+.menu_logo_container {
+    -fx-background-color: white;
+    -fx-alignment: center;
+    -fx-background-radius: 0 0 40 0;
+}
+
+.menu_logo_container Text {
+    -fx-font-size: 2em;
+    -fx-fill: linear-gradient(to right bottom, #61D8DE, #E839F6);
+}
+
+.menu_logo_container FontAwesomeIcon {
+    -fx-fill: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-alignment: center;
+}
+
+/* Button Container Styles */
+.menu_button_container {
+    -fx-background-color: white;
+    -fx-alignment: center;
+    -fx-spacing: 30;
+    -fx-background-radius: 0 40 40 0;
+    -fx-font-weight: normal;
+}
+
+.menu_button_container FontAwesomeIcon {
+    -fx-fill: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-alignment: left;
+    -fx-font-size: 20;
+}
+
+.menu_button_container Button {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
+    -fx-effect: dropshadow(two-pass-box,#dadada,5,0,0,4);
+    -fx-pref-height: 30;
+    -fx-pref-width: 165;
+    -fx-font-size: 1.2em;
+    -fx-background-radius: 10 0 10 0;
+}
+
+.menu_button_container Button:hover {
+    -fx-cursor: hand;
+}
+
+/* Report Container Styles */
+.menu_report_container {
+    -fx-background-color: white;
+    -fx-alignment: center;
+    -fx-background-radius: 0 40 0 0;
+    -fx-spacing: 10;
+}
+
+.menu_report_container Label {
+    -fx-font-size: 1em;
+    -fx-fill: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-wrap-text: true;
+}
+
+.menu_report_container FontAwesomeIcon {
+    -fx-fill: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-alignment: left;
+}
+
+.menu_report_container Button {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #E839F6FF;
+    -fx-effect: dropshadow(two-pass-box,#dadada,5,0,0,4);
+    -fx-pref-height: 30;
+    -fx-pref-width: 110;
+    -fx-font-size: 1.2em;
+    -fx-background-radius: 10 0 10 0;
+}
+
+.menu_report_container Button:hover {
+    -fx-cursor: hand;
+}
