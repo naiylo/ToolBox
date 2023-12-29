@@ -1,0 +1,35 @@
+/* Main Container */
+.admin_profiles_cell_container {
+    -fx-background-color: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-font-family: "Century Gothic";
+    -fx-font-weight: bold;
+    -fx-background-radius: 10 10 10 10;
+
+}
+
+.admin_profiles_cell_container Button {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-pref-height: 30;
+    -fx-pref-width: 110;
+    -fx-font-size: 1.2em;
+    -fx-background-radius: 10 0 10 0;
+}
+
+.admin_profiles_cell_container Button:hover {
+    -fx-cursor: hand;
+}
+
+.admin_profiles_cell_container HBox {
+    -fx-spacing: 25;
+    -fx-padding: 0 10 0 10;
+    -fx-alignment: Center_left;
+    -fx-background-color: white;
+    -fx-background-radius: 0 20 0 20;
+}
+
+.admin_profiles_cell_container HBox Label {
+    -fx-font-size: 1.0em;
+    -fx-alignment: left;
+    -fx-wrap-text: true;
+}

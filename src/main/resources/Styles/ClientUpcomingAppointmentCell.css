@@ -1,0 +1,28 @@
+/* Main Container */
+.client_upcoming_appointment_cell_container {
+    -fx-background-color: white;
+    -fx-alignment: center;
+    -fx-font-family: "Century Gothic";
+    -fx-background-radius: 0 40 0 40;
+    -fx-border-color: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-border-radius: 0 40 0 40;
+    -fx-font-weight: bold;
+    -fx-pref-width: 136px;
+    -fx-pref-height: 180px;
+}
+
+.client_upcoming_appointment_cell_container Text {
+    -fx-font-size: 1.8em;
+    -fx-fill: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-alignment: left;
+}
+
+.client_upcoming_appointment_cell_container Label {
+    -fx-font-size: 1.0em;
+    -fx-alignment: left;
+    -fx-wrap-text: true;
+}
+
+.client_upcoming_appointment_cell_container VBox {
+    -fx-padding: 0 10 0 7;
+}

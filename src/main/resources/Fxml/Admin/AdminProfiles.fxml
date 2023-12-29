@@ -16,6 +16,6 @@
             </color>
          </DropShadow>
       </effect>
-      <ListView fx:id="profiles_listview" layoutX="14.0" layoutY="14.0" prefHeight="567.0" prefWidth="722.0" />
+      <ListView fx:id="profiles_listview" layoutX="14.0" layoutY="14.0" prefHeight="560.0" prefWidth="720.0" />
    </AnchorPane>
 </AnchorPane>
