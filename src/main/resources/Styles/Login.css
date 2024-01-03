@@ -78,6 +78,7 @@
 
 .error_label {
     -fx-text-fill: red;
+    -fx-alignment: center;
 }
 
 .login_form_container FontAwesomeIcon {

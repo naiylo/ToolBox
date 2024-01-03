@@ -28,10 +28,20 @@ public class LoginController implements Initializable {
     }
 
     private void onLogin() {
-        Stage stage =(Stage) error_label.getScene().getWindow();
-        Model.getInstance().getViewFactory().closeStage(stage);
+        Stage stage = (Stage) error_label.getScene().getWindow();
         if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.CLIENT) {
-            Model.getInstance().getViewFactory().showClientWindow();
+            // Evaluate Client Login Credentials
+            Model.getInstance().evaluateClientCredentials(email_address_field.getText(), password_field.getText());
+            if (Model.getInstance().getClientLoginSuccessFlag()) {
+                Model.getInstance().getViewFactory().showClientWindow();
+                // Close the Login Stage
+                Model.getInstance().getViewFactory().closeStage(stage);
+            } else {
+                error_label.setVisible(true);
+                email_address_field.setText("");
+                password_field.setText("");
+                error_label.setText("No such login credentials found!");
+            }
         } else {
             Model.getInstance().getViewFactory().showAdminWindow();
         }
