@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class AdminMenuController implements Initializable {
@@ -24,20 +25,38 @@ public class AdminMenuController implements Initializable {
     }
 
     private void addListeners() {
-        profiles_button.setOnAction(event -> onProfiles());
-        create_account_button.setOnAction(event -> onCreateAccounts());
-        delete_account_button.setOnAction(event -> onDeleteAccounts());
+        profiles_button.setOnAction(event -> {
+            try {
+                onProfiles();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        create_account_button.setOnAction(event -> {
+            try {
+                onCreateAccounts();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        delete_account_button.setOnAction(event -> {
+            try {
+                onDeleteAccounts();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
-    private void onDeleteAccounts() {
+    private void onDeleteAccounts() throws SQLException {
         Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.DELETE_ACCOUNTS);
     }
 
-    private void onProfiles() {
+    private void onProfiles() throws SQLException {
         Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.PROFILES);
     }
 
-    private void onCreateAccounts() {
+    private void onCreateAccounts() throws SQLException {
         Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.CREATE_ACCOUNTS);
     }
 }

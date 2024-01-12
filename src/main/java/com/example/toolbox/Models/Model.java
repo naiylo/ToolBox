@@ -4,6 +4,7 @@ import com.example.toolbox.Views.AccountType;
 import com.example.toolbox.Views.ViewFactory;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Arrays;
 
@@ -19,15 +20,15 @@ public class Model {
     // Admin data section
 
 
-    private Model() {
+    private Model() throws SQLException {
         this.viewFactory = new ViewFactory();
         this.databaseDriver = new DatabaseDriver();
         // Client Data Section
         this.clientLoginSuccessFlag = false;
-        this.client = new Client(" "," "," ", null);
+        this.client = new Client(" "," "," ", " ", null, null);
         // Admin Data Section
     }
-    public static synchronized Model getInstance() {
+    public static synchronized Model getInstance() throws SQLException {
         if (model == null) {
             model = new Model();
         }
@@ -68,10 +69,29 @@ public class Model {
                 this.client.firstnameProperty().set(resultSet.getString("FirstName"));
                 this.client.lastnameProperty().set(resultSet.getString("LastName"));
                 this.client.email_addressProperty().set(resultSet.getString("EmailAddress"));
+                this.client.passwordProperty().set(resultSet.getString("Password"));
                 String[] dateParts = resultSet.getString("Date").split("-");
-                System.out.print(Arrays.toString(dateParts));
                 LocalDate date = LocalDate.of(Integer.parseInt(dateParts[0]),Integer.parseInt(dateParts[1]),Integer.parseInt(dateParts[2]));
                 this.client.localDateProperty().set(date);
+                // Create the List of appointments
+                ResultSet appointments = databaseDriver.getClientAppointments(emailAddress);
+                try {
+                    if (appointments.isBeforeFirst()) {
+                        while (appointments.next()) {
+                            // create an Appointment object from the ResultSet
+                            String[] appointmentDate = appointments.getString("Date").split("-");
+                            LocalDate appointmentDateFormat = LocalDate.of(Integer.parseInt(dateParts[0]),Integer.parseInt(dateParts[1]),Integer.parseInt(dateParts[2]));
+                            Appointment appointment = new Appointment(appointmentDateFormat, appointments.getString("Timeslot"), appointments.getString("Description"));
+                            // add it to the ListProperty
+                            //appointment.printAppointment();
+                            client.addAppointment(appointment);
+                        }
+                    } else {
+                        System.out.print("No appointments found!");
+                    }
+                } catch (Exception ignored) {
+                }
+
                 this.clientLoginSuccessFlag= true;
             }
             else {

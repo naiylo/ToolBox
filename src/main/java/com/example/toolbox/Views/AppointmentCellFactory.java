@@ -4,24 +4,13 @@ import com.example.toolbox.Controllers.Client.ClientUpcomingAppointmentCellContr
 import com.example.toolbox.Models.Appointment;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
+import javafx.util.Callback;
 
-public class AppointmentCellFactory extends ListCell<Appointment> {
+public class AppointmentCellFactory implements Callback<ListView<Appointment>, ListCell<Appointment>> {
+
     @Override
-    protected void updateItem(Appointment appointment, boolean empty) {
-        super.updateItem(appointment, empty);
-        if (empty) {
-            setText(null);
-            setGraphic(null);
-        } else {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Fxml/Client/ClientUpcomingAppointmentCell.fxml"));
-            ClientUpcomingAppointmentCellController controller = new ClientUpcomingAppointmentCellController(appointment);
-            loader.setController(controller);
-            setText(null);
-            try {
-                setGraphic(loader.load());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+    public ListCell<Appointment> call(ListView<Appointment> appointmentListView) {
+        return new ClientUpcomingAppointmentCellController();
     }
 }

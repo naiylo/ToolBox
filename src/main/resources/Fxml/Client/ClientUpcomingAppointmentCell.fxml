@@ -5,17 +5,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="180.0" prefWidth="136.0" styleClass="client_upcoming_appointment_cell_container"
-            stylesheets="@../../Styles/ClientUpcomingAppointmentCell.css"
-            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <VBox prefHeight="180.0" prefWidth="136.0">
-      <children>
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date: " />
-         <Label fx:id="date_label" prefHeight="15.0" prefWidth="114.0" text="2022-18-12" />
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Timeslot:" />
-         <Label fx:id="timeslot_label" text="12.00-14.00" />
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description: " />
-         <Label fx:id="description_label" prefHeight="57.0" prefWidth="114.0" text="Breakfast with my Step-parents at her mothers house" />
-      </children>
+<fx:root type="javafx.scene.control.ListCell" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+   <graphic>
+      <VBox prefHeight="180.0" prefWidth="136.0">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date: "/>
+      <Label fx:id="date_label" prefHeight="15.0" prefWidth="114.0" text="2022-18-12"/>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Timeslot:"/>
+      <Label fx:id="timeslot_label" text="12.00-14.00"/>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description: "/>
+      <Label fx:id="description_label" prefHeight="57.0" prefWidth="114.0"
+             text="Breakfast with my Step-parents at her mothers house"/>
    </VBox>
-</AnchorPane>
+   </graphic>
+</fx:root>

@@ -21,4 +21,14 @@ public class Appointment {
 
     public ObjectProperty<LocalDate> localDateProperty() {return this.date;}
 
+    public void printAppointment() {
+        System.out.println("Description: " + this.description.getValue());
+    }
+
+    public String toString() {
+        return "test";
+    }
+
+
+
 }

@@ -28,6 +28,36 @@
     -fx-effect: dropshadow(two-pass-box, #a1a1a1,5,0,0,4);
 }
 
+.home_content_container .list-view {
+    -fx-background-color: white;
+}
+
+.home_content_container .list-cell  {
+    -fx-padding: 0.25em;
+    -fx-background-color: white;
+    -fx-font-family: "Century Gothic";
+    -fx-border-color: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-border-radius: 0 40 0 40;
+    -fx-font-weight: bold;
+    -fx-pref-width: 136px;
+    -fx-pref-height: 180px;
+}
+
+.home_content_container .list-cell Text {
+    -fx-font-size: 1.8em;
+    -fx-fill: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-alignment: left;
+}
+
+.home_content_container .list-cell Label {
+    -fx-font-size: 1.0em;
+    -fx-wrap-text: true;
+}
+
+.home_content_container .list-cell VBox {
+    -fx-padding: 0 10 0 7;
+}
+
 /* Calendar Container */
 .home_calendar_container {
     -fx-background-color: linear-gradient(to right bottom, #61D8DE, #E839F6);
@@ -79,3 +109,5 @@
     -fx-font-weight: normal;
     -fx-background-radius: 10 0 10 0;
 }
+
+

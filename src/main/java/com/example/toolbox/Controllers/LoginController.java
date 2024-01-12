@@ -8,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
@@ -22,12 +23,28 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         account_selector.setItems(FXCollections.observableArrayList(AccountType.CLIENT,AccountType.ADMIN));
-        account_selector.setValue(Model.getInstance().getViewFactory().getLoginAccountType());
-        account_selector.valueProperty().addListener(observable -> Model.getInstance().getViewFactory().setLoginAccountType(account_selector.getValue()));
-        login_button.setOnAction(event -> onLogin());
+        try {
+            account_selector.setValue(Model.getInstance().getViewFactory().getLoginAccountType());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        account_selector.valueProperty().addListener(observable -> {
+            try {
+                Model.getInstance().getViewFactory().setLoginAccountType(account_selector.getValue());
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        login_button.setOnAction(event -> {
+            try {
+                onLogin();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
-    private void onLogin() {
+    private void onLogin() throws SQLException {
         Stage stage = (Stage) error_label.getScene().getWindow();
         if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.CLIENT) {
             // Evaluate Client Login Credentials
