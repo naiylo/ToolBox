@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListCell?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<fx:root type="javafx.scene.control.ListCell" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+<fx:root minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="480.0" styleClass="client_upcoming_appointment_cell_container" stylesheets="@../../Styles/ClientUpcomingAppointmentCell.css" type="javafx.scene.control.ListCell" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <graphic>
-      <VBox prefHeight="180.0" prefWidth="136.0">
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date: "/>
-      <Label fx:id="date_label" prefHeight="15.0" prefWidth="114.0" text="2022-18-12"/>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Timeslot:"/>
-      <Label fx:id="timeslot_label" text="12.00-14.00"/>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description: "/>
-      <Label fx:id="description_label" prefHeight="57.0" prefWidth="114.0"
-             text="Breakfast with my Step-parents at her mothers house"/>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+         <AnchorPane prefHeight="100.0" prefWidth="380.0">
+            <children>
+            <Text layoutX="249.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Timeslot:" AnchorPane.topAnchor="20.0" />
+            <Label fx:id="date_label" layoutX="63.0" layoutY="6.0" text="2022-18-12" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="20.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date: " AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0" />
+            <Label fx:id="timeslot_label" layoutX="325.0" layoutY="9.0" text="12.00-14.00" AnchorPane.topAnchor="20.0" />
+            <Label fx:id="description_label" layoutX="11.0" layoutY="50.0" prefHeight="22.0" prefWidth="439.0" text="Breakfast with my Step-parents at her mothers house." />
+            </children>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </AnchorPane>
    </VBox>
    </graphic>
 </fx:root>

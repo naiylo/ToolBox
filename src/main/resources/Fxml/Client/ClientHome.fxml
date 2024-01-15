@@ -25,8 +25,8 @@
       <AnchorPane layoutX="268.0" layoutY="94.0" prefHeight="152.0" prefWidth="215.0" styleClass="home_coming_soon_container">
          <Text layoutX="38.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" textAlignment="CENTER" wrappingWidth="139.21875" />
       </AnchorPane>
-      <Label layoutX="32.0" layoutY="300.0" text="Upcoming Appointments:" />
-      <ListView fx:id="upcoming_listView" layoutX="35.0" layoutY="335.0" nodeOrientation="LEFT_TO_RIGHT" orientation="HORIZONTAL" prefHeight="247.0" prefWidth="680.0" />
+      <Label layoutX="27.0" layoutY="277.0" text="Upcoming Appointments:" />
+      <ListView fx:id="upcoming_listView" layoutX="18.0" layoutY="306.0" prefHeight="250.0" prefWidth="716.0" />
       <AnchorPane layoutX="508.0" layoutY="94.0" prefHeight="152.0" prefWidth="215.0" styleClass="home_coming_soon_container" AnchorPane.leftAnchor="503.0">
          <Text layoutX="38.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" textAlignment="CENTER" wrappingWidth="139.21875" />
       </AnchorPane>

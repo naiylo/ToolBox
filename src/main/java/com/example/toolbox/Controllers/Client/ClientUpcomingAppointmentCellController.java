@@ -38,8 +38,9 @@ public class ClientUpcomingAppointmentCellController extends ListCell<Appointmen
         if (empty || appointment == null) {
             setText(null);
             setContentDisplay(ContentDisplay.TEXT_ONLY);
+            System.out.print("empty");
         } else {
-            this.date_label.setText(appointment.localDateProperty().toString());
+            this.date_label.setText(String.valueOf(appointment.localDateProperty().getValue()));
             this.description_label.setText(appointment.descriptionProperty().getValue());
             this.timeslot_label.setText(appointment.slotProperty().getValue());
             setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
