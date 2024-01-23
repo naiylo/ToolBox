@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="client_create_appointment_container" stylesheets="@../../Styles/ClientCreateAppointment.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toolbox.Controllers.Client.ClientCreateAppointmentController">
+    <AnchorPane layoutX="295.0" layoutY="148.0" prefHeight="455.0" prefWidth="259.0" styleClass="client_create_appointment_content_container" AnchorPane.bottomAnchor="147.0" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="296.0" AnchorPane.topAnchor="148.0">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color red="1.0" green="1.0" blue="1.0" />
+                </color>
+            </DropShadow>
+        </effect>
+        <Label layoutX="35.0" layoutY="48.0" text="Date: " AnchorPane.topAnchor="50.0" />
+        <Label layoutX="35.0" layoutY="108.0" text="Timeslot:" AnchorPane.topAnchor="150.0" />
+        <Label layoutX="36.0" layoutY="173.0" text="Description:" AnchorPane.topAnchor="250.0" />
+        <TextField fx:id="date_textfield" layoutX="36.0" layoutY="81.0" prefHeight="23.0" prefWidth="176.0" promptText="01-01-2024" AnchorPane.topAnchor="75.0" />
+        <TextField fx:id="timeslot_textfield" layoutX="36.0" layoutY="88.0" prefHeight="23.0" prefWidth="176.0" promptText="18.00-20.00" AnchorPane.topAnchor="175.0" />
+        <TextField fx:id="description_textfield" layoutX="36.0" layoutY="274.0" prefHeight="23.0" prefWidth="176.0" promptText="Exam" AnchorPane.topAnchor="275.0" />
+    </AnchorPane>
+    <Text layoutX="186.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Appointment" AnchorPane.topAnchor="25.0" />
+</AnchorPane>

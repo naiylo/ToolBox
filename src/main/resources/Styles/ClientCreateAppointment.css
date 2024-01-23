@@ -1,0 +1,28 @@
+/* Main Container */
+.client_create_appointment_container {
+    -fx-background-color: white;
+    -fx-alignment: center;
+    -fx-font-family: "Century Gothic";
+    -fx-font-weight: bold;
+}
+
+.client_create_appointment_container Label {
+    -fx-font-size: 1.5em;
+    -fx-text-fill: #000000;
+    -fx-effect: dropshadow(two-pass-box, #a1a1a1,1,0,0,1);
+}
+
+.client_create_appointment_container Text {
+    -fx-font-size: 4em;
+    -fx-fill: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-alignment: left;
+}
+
+/* Content Container */
+.client_create_appointment_content_container {
+    -fx-background-color: white;
+    -fx-background-radius: 0 40 0 40;
+    -fx-border-color: linear-gradient(to right bottom, #61D8DE, #E839F6);
+    -fx-border-radius: 0 40 0 40;
+    -fx-effect: dropshadow(two-pass-box, #a1a1a1,5,0,0,4);
+}
